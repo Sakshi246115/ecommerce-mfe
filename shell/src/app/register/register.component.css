@@ -1,0 +1,162 @@
+.register-page {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: #f5f7fb;
+  font-family: Arial, sans-serif;
+}
+
+.register-container {
+  width: 100%;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+}
+
+.register-left {
+  padding: 50px 40px;
+  background: linear-gradient(135deg, #2874f0, #1557b0);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.left-content h1 {
+  margin: 0 0 18px;
+  font-size: 36px;
+}
+
+.left-content p {
+  margin: 0;
+  max-width: 380px;
+  font-size: 16px;
+  line-height: 1.7;
+  opacity: 0.92;
+}
+
+.register-illustration {
+  font-size: 100px;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.register-right {
+  padding: 50px 40px;
+  display: flex;
+  align-items: center;
+}
+
+.register-form {
+  width: 100%;
+}
+
+.register-form h2 {
+  margin: 0;
+  font-size: 26px;
+  color: #222222;
+}
+
+.subtitle {
+  margin: 10px 0 28px;
+  color: #777777;
+  font-size: 14px;
+}
+
+.input-group {
+  margin-bottom: 18px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333333;
+}
+
+.input-group input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 14px;
+  border: 1px solid #d9dfe8;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+}
+
+.input-group input:focus {
+  border-color: #2874f0;
+}
+
+.input-group input.input-error {
+  border-color: #d32f2f;
+}
+
+.field-error {
+  margin: 6px 0 0;
+  color: #d32f2f;
+  font-size: 12px;
+}
+
+.error-message {
+  margin-bottom: 15px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  background: #fff1f1;
+  color: #d32f2f;
+  font-size: 13px;
+}
+
+.continue-button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: #2874f0;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.continue-button:hover {
+  background: #1557b0;
+}
+
+.login-text {
+  margin: 22px 0 0;
+  text-align: center;
+  color: #777777;
+  font-size: 14px;
+}
+
+.login-text span {
+  color: #2874f0;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .register-container {
+    grid-template-columns: 1fr;
+  }
+
+  .register-left {
+    padding: 35px 25px;
+  }
+
+  .register-illustration {
+    font-size: 70px;
+  }
+
+  .register-right {
+    padding: 35px 25px;
+  }
+}

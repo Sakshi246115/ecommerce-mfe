@@ -1,0 +1,142 @@
+
+> shell@0.0.0 test:jest
+> jest --runInBand src/app/app.component.spec.ts
+
+ts-jest[config] (WARN) [94mmessage[0m[90m TS151001: [0mIf you have issues related to imports, you should consider setting `esModuleInterop` to `true` in your TypeScript configuration file (usually `tsconfig.json`). See https://blogs.msdn.microsoft.com/typescript/2018/01/31/announcing-typescript-2-7/#easier-ecmascript-module-interoperability for more information.
+FAIL src/app/app.component.spec.ts
+  AppComponent
+    × should create the app (6 ms)
+    × should have as title 'shell' (1 ms)
+    × should render title (2 ms)
+
+  ● AppComponent › should create the app
+
+    TypeError: this.input.charCodeAt is not a function
+
+    [0m [90m 10 |[39m
+     [90m 11 |[39m   it([32m'should create the app'[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 12 |[39m     [36mconst[39m fixture [33m=[39m [33mTestBed[39m[33m.[39mcreateComponent([33mAppComponent[39m)[33m;[39m
+     [90m    |[39m                             [31m[1m^[22m[39m
+     [90m 13 |[39m     [36mconst[39m app [33m=[39m fixture[33m.[39mcomponentInstance[33m;[39m
+     [90m 14 |[39m     expect(app)[33m.[39mtoBeTruthy()[33m;[39m
+     [90m 15 |[39m   })[33m;[39m[0m
+
+      at PlainCharacterCursor.charAt (node_modules/@angular/compiler/fesm2022/compiler.mjs:19989:27)
+      at PlainCharacterCursor.updatePeek (node_modules/@angular/compiler/fesm2022/compiler.mjs:20008:61)
+      at PlainCharacterCursor.init (node_modules/@angular/compiler/fesm2022/compiler.mjs:19967:14)
+      at new _Tokenizer (node_modules/@angular/compiler/fesm2022/compiler.mjs:19138:26)
+      at tokenize (node_modules/@angular/compiler/fesm2022/compiler.mjs:19086:23)
+      at HtmlParser.parse (node_modules/@angular/compiler/fesm2022/compiler.mjs:20176:32)
+      at HtmlParser.parse (node_modules/@angular/compiler/fesm2022/compiler.mjs:20657:22)
+      at parseTemplate (node_modules/@angular/compiler/fesm2022/compiler.mjs:24780:36)
+      at parseJitTemplate (node_modules/@angular/compiler/fesm2022/compiler.mjs:26145:20)
+      at CompilerFacadeImpl.compileComponent (node_modules/@angular/compiler/fesm2022/compiler.mjs:25851:45)
+      at Function.get (node_modules/@angular/core/fesm2022/core.mjs:25927:34)
+      at getComponentDef (node_modules/@angular/core/fesm2022/core.mjs:2034:12)
+      at verifyDeclarationsHaveDefinitions (node_modules/@angular/core/fesm2022/core.mjs:25526:21)
+          at Array.forEach (<anonymous>)
+      at verifySemanticsOfNgModuleDef (node_modules/@angular/core/fesm2022/core.mjs:25500:18)
+      at Function.get (node_modules/@angular/core/fesm2022/core.mjs:25448:30)
+      at TestBedCompiler.applyProviderOverridesInScope (node_modules/@angular/core/fesm2022/testing.mjs:26707:29)
+      at TestBedCompiler.compileTestModule (node_modules/@angular/core/fesm2022/testing.mjs:27001:14)
+      at TestBedCompiler.finalize (node_modules/@angular/core/fesm2022/testing.mjs:26549:14)
+      at _TestBedImpl.get testModuleRef [as testModuleRef] (node_modules/@angular/core/fesm2022/testing.mjs:27515:49)
+      at _TestBedImpl.inject (node_modules/@angular/core/fesm2022/testing.mjs:27428:29)
+      at _TestBedImpl.createComponent (node_modules/@angular/core/fesm2022/testing.mjs:27480:44)
+      at Function.createComponent (node_modules/@angular/core/fesm2022/testing.mjs:27302:37)
+      at src/app/app.component.spec.ts:12:29
+      at _ZoneDelegate.Object.<anonymous>._ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:411:30)
+      at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (node_modules/zone.js/bundles/zone-testing.umd.js:300:43)
+      at _ZoneDelegate.Object.<anonymous>._ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:410:56)
+      at Zone.Object.<anonymous>.Zone.run (node_modules/zone.js/bundles/zone.umd.js:165:47)
+      at Object.wrappedFunc (node_modules/zone.js/bundles/zone-testing.umd.js:789:34)
+
+  ● AppComponent › should have as title 'shell'
+
+    TypeError: this.input.charCodeAt is not a function
+
+    [0m [90m 16 |[39m
+     [90m 17 |[39m   it([32m`should have as title 'shell'`[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 18 |[39m     [36mconst[39m fixture [33m=[39m [33mTestBed[39m[33m.[39mcreateComponent([33mAppComponent[39m)[33m;[39m
+     [90m    |[39m                             [31m[1m^[22m[39m
+     [90m 19 |[39m     [36mconst[39m app [33m=[39m fixture[33m.[39mcomponentInstance[33m;[39m
+     [90m 20 |[39m     expect(app[33m.[39mtitle)[33m.[39mtoEqual([32m'shell'[39m)[33m;[39m
+     [90m 21 |[39m   })[33m;[39m[0m
+
+      at PlainCharacterCursor.charAt (node_modules/@angular/compiler/fesm2022/compiler.mjs:19989:27)
+      at PlainCharacterCursor.updatePeek (node_modules/@angular/compiler/fesm2022/compiler.mjs:20008:61)
+      at PlainCharacterCursor.init (node_modules/@angular/compiler/fesm2022/compiler.mjs:19967:14)
+      at new _Tokenizer (node_modules/@angular/compiler/fesm2022/compiler.mjs:19138:26)
+      at tokenize (node_modules/@angular/compiler/fesm2022/compiler.mjs:19086:23)
+      at HtmlParser.parse (node_modules/@angular/compiler/fesm2022/compiler.mjs:20176:32)
+      at HtmlParser.parse (node_modules/@angular/compiler/fesm2022/compiler.mjs:20657:22)
+      at parseTemplate (node_modules/@angular/compiler/fesm2022/compiler.mjs:24780:36)
+      at parseJitTemplate (node_modules/@angular/compiler/fesm2022/compiler.mjs:26145:20)
+      at CompilerFacadeImpl.compileComponent (node_modules/@angular/compiler/fesm2022/compiler.mjs:25851:45)
+      at Function.get (node_modules/@angular/core/fesm2022/core.mjs:25927:34)
+      at getComponentDef (node_modules/@angular/core/fesm2022/core.mjs:2034:12)
+      at verifyDeclarationsHaveDefinitions (node_modules/@angular/core/fesm2022/core.mjs:25526:21)
+          at Array.forEach (<anonymous>)
+      at verifySemanticsOfNgModuleDef (node_modules/@angular/core/fesm2022/core.mjs:25500:18)
+      at Function.get (node_modules/@angular/core/fesm2022/core.mjs:25448:30)
+      at TestBedCompiler.applyProviderOverridesInScope (node_modules/@angular/core/fesm2022/testing.mjs:26707:29)
+      at TestBedCompiler.compileTestModule (node_modules/@angular/core/fesm2022/testing.mjs:27001:14)
+      at TestBedCompiler.finalize (node_modules/@angular/core/fesm2022/testing.mjs:26549:14)
+      at _TestBedImpl.get testModuleRef [as testModuleRef] (node_modules/@angular/core/fesm2022/testing.mjs:27515:49)
+      at _TestBedImpl.inject (node_modules/@angular/core/fesm2022/testing.mjs:27428:29)
+      at _TestBedImpl.createComponent (node_modules/@angular/core/fesm2022/testing.mjs:27480:44)
+      at Function.createComponent (node_modules/@angular/core/fesm2022/testing.mjs:27302:37)
+      at src/app/app.component.spec.ts:18:29
+      at _ZoneDelegate.Object.<anonymous>._ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:411:30)
+      at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (node_modules/zone.js/bundles/zone-testing.umd.js:300:43)
+      at _ZoneDelegate.Object.<anonymous>._ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:410:56)
+      at Zone.Object.<anonymous>.Zone.run (node_modules/zone.js/bundles/zone.umd.js:165:47)
+      at Object.wrappedFunc (node_modules/zone.js/bundles/zone-testing.umd.js:789:34)
+
+  ● AppComponent › should render title
+
+    TypeError: this.input.charCodeAt is not a function
+
+    [0m [90m 22 |[39m
+     [90m 23 |[39m   it([32m'should render title'[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 24 |[39m     [36mconst[39m fixture [33m=[39m [33mTestBed[39m[33m.[39mcreateComponent([33mAppComponent[39m)[33m;[39m
+     [90m    |[39m                             [31m[1m^[22m[39m
+     [90m 25 |[39m     fixture[33m.[39mdetectChanges()[33m;[39m
+     [90m 26 |[39m     [36mconst[39m compiled [33m=[39m fixture[33m.[39mnativeElement [36mas[39m [33mHTMLElement[39m[33m;[39m
+     [90m 27 |[39m     expect(compiled[33m.[39mquerySelector([32m'.content span'[39m)[33m?[39m[33m.[39mtextContent)[33m.[39mtoContain([32m'shell app is running!'[39m)[33m;[39m[0m
+
+      at PlainCharacterCursor.charAt (node_modules/@angular/compiler/fesm2022/compiler.mjs:19989:27)
+      at PlainCharacterCursor.updatePeek (node_modules/@angular/compiler/fesm2022/compiler.mjs:20008:61)
+      at PlainCharacterCursor.init (node_modules/@angular/compiler/fesm2022/compiler.mjs:19967:14)
+      at new _Tokenizer (node_modules/@angular/compiler/fesm2022/compiler.mjs:19138:26)
+      at tokenize (node_modules/@angular/compiler/fesm2022/compiler.mjs:19086:23)
+      at HtmlParser.parse (node_modules/@angular/compiler/fesm2022/compiler.mjs:20176:32)
+      at HtmlParser.parse (node_modules/@angular/compiler/fesm2022/compiler.mjs:20657:22)
+      at parseTemplate (node_modules/@angular/compiler/fesm2022/compiler.mjs:24780:36)
+      at parseJitTemplate (node_modules/@angular/compiler/fesm2022/compiler.mjs:26145:20)
+      at CompilerFacadeImpl.compileComponent (node_modules/@angular/compiler/fesm2022/compiler.mjs:25851:45)
+      at Function.get (node_modules/@angular/core/fesm2022/core.mjs:25927:34)
+      at getComponentDef (node_modules/@angular/core/fesm2022/core.mjs:2034:12)
+      at verifyDeclarationsHaveDefinitions (node_modules/@angular/core/fesm2022/core.mjs:25526:21)
+          at Array.forEach (<anonymous>)
+      at verifySemanticsOfNgModuleDef (node_modules/@angular/core/fesm2022/core.mjs:25500:18)
+      at Function.get (node_modules/@angular/core/fesm2022/core.mjs:25448:30)
+      at TestBedCompiler.applyProviderOverridesInScope (node_modules/@angular/core/fesm2022/testing.mjs:26707:29)
+      at TestBedCompiler.compileTestModule (node_modules/@angular/core/fesm2022/testing.mjs:27001:14)
+      at TestBedCompiler.finalize (node_modules/@angular/core/fesm2022/testing.mjs:26549:14)
+      at _TestBedImpl.get testModuleRef [as testModuleRef] (node_modules/@angular/core/fesm2022/testing.mjs:27515:49)
+      at _TestBedImpl.inject (node_modules/@angular/core/fesm2022/testing.mjs:27428:29)
+      at _TestBedImpl.createComponent (node_modules/@angular/core/fesm2022/testing.mjs:27480:44)
+      at Function.createComponent (node_modules/@angular/core/fesm2022/testing.mjs:27302:37)
+      at src/app/app.component.spec.ts:24:29
+      at _ZoneDelegate.Object.<anonymous>._ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:411:30)
+      at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (node_modules/zone.js/bundles/zone-testing.umd.js:300:43)
+      at _ZoneDelegate.Object.<anonymous>._ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:410:56)
+      at Zone.Object.<anonymous>.Zone.run (node_modules/zone.js/bundles/zone.umd.js:165:47)
+      at Object.wrappedFunc (node_modules/zone.js/bundles/zone-testing.umd.js:789:34)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 3 total
+Snapshots:   0 total
+Time:        3.578 s
+Ran all test suites matching /src\\app\\app.component.spec.ts/i.

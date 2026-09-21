@@ -1,0 +1,226 @@
+<div class="orders-page">
+
+  <!-- Page Header -->
+  <div class="orders-header">
+
+    <div>
+
+      <p class="eyebrow">
+        {{ ordersContent.ordersBadge }}
+      </p>
+
+      <h1>
+        {{ ordersContent.ordersTitle }}
+      </h1>
+
+      <p class="header-description">
+        {{ ordersContent.ordersSubtitle }}
+      </p>
+
+    </div>
+
+    <div class="orders-icon">
+      📦
+    </div>
+
+  </div>
+
+
+  <!-- Empty Orders -->
+  <div
+    class="empty-orders"
+    *ngIf="orders.length === 0">
+
+    <div class="empty-icon">
+      📦
+    </div>
+
+    <h2>
+      {{ ordersContent.emptyTitle }}
+    </h2>
+
+    <p>
+      {{ ordersContent.emptyDescription }}
+    </p>
+
+  </div>
+
+
+  <!-- Orders List -->
+  <div
+    class="orders-list"
+    *ngIf="orders.length > 0">
+
+    <!-- Order Card -->
+    <div
+      class="order-card"
+      *ngFor="let order of orders">
+
+      <!-- Order Header -->
+      <div class="order-card-header">
+
+        <div>
+
+          <span class="order-label">
+            {{ ordersContent.orderId }}
+          </span>
+
+          <strong>
+            {{ order.orderId }}
+          </strong>
+
+        </div>
+
+
+        <div>
+
+          <span class="order-label">
+            {{ ordersContent.orderDate }}
+          </span>
+
+          <strong>
+            {{ order.orderDate | date:'dd MMM yyyy, hh:mm a' }}
+          </strong>
+
+        </div>
+
+
+        <div class="order-status">
+
+          <span>
+            {{ order.status }}
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- Actual Ordered Products -->
+      <div class="order-products">
+
+        <div
+          class="order-product"
+          *ngFor="let item of order.items">
+
+          <!-- Actual Product Image -->
+          <div class="product-image">
+
+            <img
+              *ngIf="item.image"
+              [src]="item.image"
+              [alt]="item.name"
+            />
+
+            <span *ngIf="!item.image">
+              🛍️
+            </span>
+
+          </div>
+
+
+          <div class="product-info">
+
+            <h3>
+              {{ item.name }}
+            </h3>
+
+            <p>
+              {{ ordersContent.quantity }}:
+              {{ item.quantity }}
+            </p>
+
+            <p>
+              {{ ordersContent.price }}:
+              ₹{{ item.price | number }}
+            </p>
+
+          </div>
+
+
+          <strong class="item-total">
+            ₹{{ item.price * item.quantity | number }}
+          </strong>
+
+        </div>
+
+      </div>
+
+
+      <!-- Order Details -->
+      <div class="order-details">
+
+        <div class="detail-box">
+
+          <span>
+            {{ ordersContent.payment }}
+          </span>
+
+          <strong>
+            {{ getPaymentMethod(order) }}
+          </strong>
+
+        </div>
+
+
+        <div class="detail-box">
+
+          <span>
+            {{ ordersContent.delivery }}
+          </span>
+
+          <strong>
+            ₹{{ order.deliveryCharge | number }}
+          </strong>
+
+        </div>
+
+
+        <div class="detail-box">
+
+          <span>
+            {{ ordersContent.totalAmount }}
+          </span>
+
+          <strong class="total-amount">
+            ₹{{ order.total | number }}
+          </strong>
+
+        </div>
+
+      </div>
+
+
+      <!-- Delivery Address -->
+      <div class="delivery-address">
+
+        <h3>
+          {{ ordersContent.deliveryAddress }}
+        </h3>
+
+        <p>
+          {{ order.customer.name }},
+          {{ order.customer.address }},
+          {{ order.customer.city }},
+          {{ order.customer.state }}
+          - {{ order.customer.pincode }}
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- Clear History -->
+    <button
+      type="button"
+      class="clear-orders-button"
+      (click)="clearOrderHistory()">
+
+      {{ ordersContent.clearHistory }}
+
+    </button>
+
+  </div>
+
+</div>

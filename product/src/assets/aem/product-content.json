@@ -1,0 +1,50 @@
+{
+  "screenCoverage": "single",
+  "moduleIdentifier": "ecommerce",
+  "lastModified": "2026-09-18T00:00:00.000",
+  "content": [
+    {
+      "screenIdentifier": "products",
+      "screenContent": [
+        {
+          "key": "heading",
+          "title": "Discover Amazing Products (AEM)",
+          "description": "Find quality products at the best prices. (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "search",
+          "title": "Search products (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "empty-state",
+          "title": "No products found (AEM)",
+          "description": "Try changing your search or filters. (AEM)",
+          "device": "both"
+        }
+      ]
+    },
+    {
+      "screenIdentifier": "product-details",
+      "screenContent": [
+        {
+          "key": "back-button",
+          "title": "← Back to Products (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "add-to-cart",
+          "title": "🛒 Add to Cart (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "not-found",
+          "title": "Product Not Found (AEM)",
+          "description": "The product you are looking for is not available. (AEM)",
+          "device": "both"
+        }
+      ]
+    }
+  ]
+}

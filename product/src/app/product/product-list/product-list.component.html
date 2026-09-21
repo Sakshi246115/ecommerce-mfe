@@ -1,0 +1,323 @@
+<div class="products-page">
+
+  <!-- LOADING STATE -->
+  <div
+    class="loading-container"
+    *ngIf="isLoading"
+  >
+
+    <div class="loading-spinner"></div>
+
+    <h2>
+      Loading Products...
+    </h2>
+
+    <p>
+      Please wait while we fetch the latest products.
+    </p>
+
+  </div>
+
+
+  <!-- MAIN PRODUCTS CONTENT -->
+  <div *ngIf="!isLoading">
+
+    <!-- PAGE HEADER -->
+    <section class="products-header">
+
+      <!-- BACK TO HOME -->
+      <button
+        class="home-button"
+        routerLink="/"
+      >
+        ← Back to Home
+      </button>
+
+      <div>
+
+        <span class="section-label">
+          OUR STORE
+        </span>
+
+        <h1>
+          {{ productContent.heading }}
+        </h1>
+
+        <p>
+          {{ productContent.description }}
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- SEARCH & FILTERS -->
+    <section class="filter-section">
+
+      <!-- SEARCH -->
+      <div class="search-box">
+
+        <span>
+          🔍
+        </span>
+
+        <input
+          type="text"
+          [placeholder]="productContent.searchPlaceholder"
+          [(ngModel)]="searchText"
+          (input)="searchProducts(searchText)"
+        />
+
+      </div>
+
+
+      <!-- CATEGORY -->
+      <select
+        class="filter-select"
+        [ngModel]="selectedCategory"
+        (ngModelChange)="filterByCategory($event)"
+      >
+
+        <option value="All">
+          All Categories
+        </option>
+
+        <option value="Electronics">
+          Electronics
+        </option>
+
+        <option value="Fashion">
+          Fashion
+        </option>
+
+        <option value="Home">
+          Home
+        </option>
+
+      </select>
+
+
+      <!-- PRICE -->
+      <select
+        class="filter-select"
+        [ngModel]="selectedPriceFilter"
+        (ngModelChange)="filterByPrice($event)"
+      >
+
+        <option value="All Prices">
+          All Prices
+        </option>
+
+        <option value="Under ₹1,000">
+          Under ₹1,000
+        </option>
+
+        <option value="₹1,000 - ₹5,000">
+          ₹1,000 - ₹5,000
+        </option>
+
+        <option value="₹5,000 - ₹20,000">
+          ₹5,000 - ₹20,000
+        </option>
+
+        <option value="Above ₹20,000">
+          Above ₹20,000
+        </option>
+
+      </select>
+
+
+      <!-- RATING -->
+      <select
+        class="filter-select"
+        [ngModel]="selectedRatingFilter"
+        (ngModelChange)="filterByRating($event)"
+      >
+
+        <option value="All Ratings">
+          All Ratings
+        </option>
+
+        <option value="4 ⭐ & above">
+          4 ⭐ & above
+        </option>
+
+        <option value="3 ⭐ & above">
+          3 ⭐ & above
+        </option>
+
+        <option value="2 ⭐ & above">
+          2 ⭐ & above
+        </option>
+
+      </select>
+
+
+      <!-- SORT -->
+      <select
+        class="filter-select"
+        [ngModel]="selectedSort"
+        (ngModelChange)="sortProducts($event)"
+      >
+
+        <option value="default">
+          Sort: Default
+        </option>
+
+        <option value="price-low-high">
+          Price: Low → High
+        </option>
+
+        <option value="price-high-low">
+          Price: High → Low
+        </option>
+
+        <option value="rating-high-low">
+          Rating: High → Low
+        </option>
+
+      </select>
+
+    </section>
+
+
+    <!-- PRODUCT COUNT -->
+    <div class="product-count">
+
+      <span>
+        Showing {{ filteredProducts.length }} products
+      </span>
+
+    </div>
+
+
+    <!-- PRODUCT GRID -->
+    <section class="product-grid">
+
+      <!-- PRODUCT CARD -->
+      <div
+        class="product-card"
+        *ngFor="let product of filteredProducts"
+      >
+
+        <!-- DISCOUNT -->
+        <div class="discount-badge">
+          {{ product.discount }}% OFF
+        </div>
+
+
+        <!-- REAL PRODUCT IMAGE -->
+        <div class="product-image">
+
+          <img
+            [src]="product.image"
+            [alt]="product.name"
+            loading="lazy"
+          />
+
+        </div>
+
+
+        <!-- PRODUCT INFO -->
+        <div class="product-info">
+
+          <!-- CATEGORY -->
+          <span class="product-category">
+            {{ product.category }}
+          </span>
+
+
+          <!-- NAME -->
+          <h2>
+            {{ product.name }}
+          </h2>
+
+
+          <!-- DESCRIPTION -->
+          <p class="product-description">
+            {{ product.description }}
+          </p>
+
+
+          <!-- RATING -->
+          <div class="rating">
+
+            <span class="stars">
+              ⭐
+            </span>
+
+            <span>
+              {{ product.rating }}
+            </span>
+
+            <span class="rating-text">
+              / 5
+            </span>
+
+          </div>
+
+
+          <!-- PRICE -->
+          <div class="price-section">
+
+            <span class="price">
+              ₹{{ product.price }}
+            </span>
+
+            <span class="stock">
+              ✓ In Stock
+            </span>
+
+          </div>
+
+
+          <!-- ACTIONS -->
+          <div class="product-actions">
+
+            <button
+              class="details-button"
+              [routerLink]="['/products', product.id]"
+            >
+              View Details
+            </button>
+
+            <button
+              class="cart-button"
+              (click)="addToCart(product)"
+            >
+              🛒 Add to Cart
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- NO PRODUCTS -->
+      <div
+        class="no-products"
+        *ngIf="filteredProducts.length === 0"
+      >
+
+        <div class="no-products-icon">
+          🔍
+        </div>
+
+        <h2>
+          {{ productContent.emptyTitle }}
+        </h2>
+
+        <p>
+          {{ productContent.emptyDescription }}
+        </p>
+
+      </div>
+
+    </section>
+
+  </div>
+
+</div>

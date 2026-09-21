@@ -1,0 +1,287 @@
+{
+  "screenCoverage": "single",
+  "moduleIdentifier": "ecommerce",
+  "lastModified": "2026-09-20T00:00:00.000",
+  "content": [
+    {
+      "screenIdentifier": "cart",
+      "screenContent": [
+        {
+          "key": "cart-badge",
+          "title": "🛒 SHOPPING CART (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "cart-title",
+          "title": "My Shopping Cart (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "cart-subtitle",
+          "title": "Review your selected products before checkout. (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "empty-title",
+          "title": "Your cart is empty (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "empty-description",
+          "title": "You haven't added any products yet. (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "continue-shopping",
+          "title": "Continue Shopping (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "order-summary",
+          "title": "Order Summary (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "quantity",
+          "title": "Quantity (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "item-total",
+          "title": "Item Total (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "remove",
+          "title": "🗑 Remove (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "clear-cart",
+          "title": "🗑 Clear Cart (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "checkout",
+          "title": "Proceed to Checkout → (AEM)",
+          "device": "both"
+        }
+      ]
+    },
+    {
+      "screenIdentifier": "checkout",
+      "screenContent": [
+        {
+          "key": "checkout-badge",
+          "title": "SECURE CHECKOUT (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "checkout-title",
+          "title": "Complete Your Order (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "checkout-subtitle",
+          "title": "Enter your delivery details and choose your preferred payment method. (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "secure-checkout",
+          "title": "🔒 Secure Checkout (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "order-success",
+          "title": "Order Placed Successfully! (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "customer-information",
+          "title": "Customer Information (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "delivery-address",
+          "title": "Delivery Address (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "payment-method",
+          "title": "Payment Method (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "cash-on-delivery",
+          "title": "Cash on Delivery (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "online-payment",
+          "title": "Online Payment (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "upi",
+          "title": "UPI (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "card",
+          "title": "Credit / Debit Card (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "netbanking",
+          "title": "Net Banking (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "wallet",
+          "title": "Wallet (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "order-summary",
+          "title": "Order Summary (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "subtotal",
+          "title": "Subtotal (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "delivery",
+          "title": "Delivery (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "free",
+          "title": "FREE (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "total",
+          "title": "Total (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "place-order",
+          "title": "Place Order (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "continue-shopping",
+          "title": "Continue Shopping (AEM)",
+          "device": "both"
+        }
+      ]
+    },
+    {
+      "screenIdentifier": "orders",
+      "screenContent": [
+        {
+          "key": "orders-badge",
+          "title": "MY ACCOUNT (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "orders-title",
+          "title": "My Orders (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "orders-subtitle",
+          "title": "View your recent orders and order details. (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "empty-title",
+          "title": "No Orders Yet (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "empty-description",
+          "title": "You haven't placed any orders yet. (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "order-id",
+          "title": "ORDER ID (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "order-date",
+          "title": "ORDER DATE (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "quantity",
+          "title": "Quantity (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "price",
+          "title": "Price (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "payment",
+          "title": "Payment (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "delivery",
+          "title": "Delivery (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "total-amount",
+          "title": "Total Amount (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "delivery-address",
+          "title": "📍 Delivery Address (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "clear-history",
+          "title": "Clear Order History (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "cash-on-delivery",
+          "title": "Cash on Delivery (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "upi",
+          "title": "UPI (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "card",
+          "title": "Credit / Debit Card (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "netbanking",
+          "title": "Net Banking (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "wallet",
+          "title": "Wallet (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "online-payment",
+          "title": "Online Payment (AEM)",
+          "device": "both"
+        }
+      ]
+    }
+  ]
+}

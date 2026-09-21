@@ -1,0 +1,410 @@
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.header {
+
+  width: 100%;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 1000;
+
+}
+
+.header-container {
+
+  max-width: 1200px;
+
+  min-height: 72px;
+
+  margin: 0 auto;
+
+  padding: 0 30px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 25px;
+
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.logo {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  cursor: pointer;
+
+  user-select: none;
+
+}
+
+.logo-icon {
+
+  font-size: 27px;
+
+}
+
+.logo-text {
+
+  font-size: 20px;
+
+  font-weight: 800;
+
+  color: #111827;
+
+  white-space: nowrap;
+
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.navigation {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-left: auto;
+
+}
+
+.navigation a {
+
+  padding: 9px 14px;
+
+  color: #4b5563;
+
+  text-decoration: none;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  transition: all 0.2s ease;
+
+}
+
+.navigation a:hover {
+
+  color: #2563eb;
+
+  background: #eff6ff;
+
+}
+
+.navigation a.active {
+
+  color: #2563eb;
+
+  background: #eff6ff;
+
+}
+
+
+/* =========================================================
+   USER SECTION
+   ========================================================= */
+
+.user-section {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+}
+
+.user-info {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  cursor: pointer;
+
+}
+
+.user-info * {
+
+  cursor: pointer;
+
+}
+
+.user-icon {
+
+  width: 38px;
+
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #eff6ff;
+
+  border-radius: 50%;
+
+  font-size: 18px;
+
+}
+
+.user-details {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2px;
+
+}
+
+.welcome-text {
+
+  color: #9ca3af;
+
+  font-size: 10px;
+
+  font-weight: 500;
+
+}
+
+.user-email {
+
+  max-width: 170px;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+  color: #111827;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+}
+
+
+/* =========================================================
+   LOGOUT BUTTON
+   ========================================================= */
+
+.logout-button {
+
+  padding: 9px 15px;
+
+  border: 1px solid #dc2626;
+
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  color: #dc2626;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+
+}
+
+.logout-button:hover {
+
+  background: #dc2626;
+
+  color: #ffffff;
+
+}
+
+.logout-button:active {
+
+  transform: scale(0.97);
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .header-container {
+
+    padding: 0 20px;
+
+    gap: 15px;
+
+  }
+
+  .logo-text {
+
+    font-size: 18px;
+
+  }
+
+  .navigation a {
+
+    padding: 8px 10px;
+
+  }
+
+  .user-email {
+
+    max-width: 120px;
+
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .header-container {
+
+    min-height: 65px;
+
+    padding: 0 15px;
+
+    gap: 10px;
+
+  }
+
+  .logo-icon {
+
+    font-size: 23px;
+
+  }
+
+  .logo-text {
+
+    font-size: 16px;
+
+  }
+
+  .navigation {
+
+    gap: 2px;
+
+  }
+
+  .navigation a {
+
+    padding: 7px 8px;
+
+    font-size: 12px;
+
+  }
+
+  .user-section {
+
+    gap: 7px;
+
+  }
+
+  .user-details {
+
+    display: none;
+
+  }
+
+  .user-icon {
+
+    width: 34px;
+
+    height: 34px;
+
+    font-size: 16px;
+
+  }
+
+  .logout-button {
+
+    padding: 7px 10px;
+
+    font-size: 11px;
+
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .header-container {
+
+    padding: 0 10px;
+
+    gap: 5px;
+
+  }
+
+  .logo-text {
+
+    display: none;
+
+  }
+
+  .navigation a {
+
+    padding: 6px;
+
+    font-size: 11px;
+
+  }
+
+  .logout-button {
+
+    padding: 6px 8px;
+
+    font-size: 10px;
+
+  }
+
+}

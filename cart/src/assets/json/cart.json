@@ -1,0 +1,87 @@
+{
+  "screenCoverage": "single",
+  "moduleIdentifier": "ecommerce",
+  "lastModified": "2026-09-16T00:00:00.000",
+  "content": [
+    {
+      "screenIdentifier": "cart",
+      "screenContent": [
+        {
+          "key": "cart-badge",
+          "title": "🛒 SHOPPING CART (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "cart-heading",
+          "title": "My Car66666666666666666666666666t",
+          "device": "both"
+        },
+        {
+          "key": "cart-subtitle",
+          "title": "Review your selected products before checkout.",
+          "device": "both"
+        },
+        {
+          "key": "empty-cart-title",
+          "title": "Your cart is empty",
+          "device": "both"
+        },
+        {
+          "key": "empty-cart-description",
+          "title": "You haven't added any products yet.",
+          "device": "both"
+        },
+        {
+          "key": "continue-shopping",
+          "title": "Continue Shopping",
+          "device": "both"
+        },
+        {
+          "key": "quantity-label",
+          "title": "Quantity",
+          "device": "both"
+        },
+        {
+          "key": "item-total-label",
+          "title": "Item Total",
+          "device": "both"
+        },
+        {
+          "key": "remove-button",
+          "title": "🗑 Remove",
+          "device": "both"
+        },
+        {
+          "key": "clear-cart-button",
+          "title": "🗑 Clear Cart",
+          "device": "both"
+        },
+        {
+          "key": "order-summary-title",
+          "title": "Order Summary",
+          "device": "both"
+        },
+        {
+          "key": "items-label",
+          "title": "Items",
+          "device": "both"
+        },
+        {
+          "key": "shipping-label",
+          "title": "Shipping",
+          "device": "both"
+        },
+        {
+          "key": "total-label",
+          "title": "Total",
+          "device": "both"
+        },
+        {
+          "key": "checkout-button",
+          "title": "Proceed to Checkout →",
+          "device": "both"
+        }
+      ]
+    }
+  ]
+}

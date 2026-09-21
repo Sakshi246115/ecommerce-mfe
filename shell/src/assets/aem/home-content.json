@@ -1,0 +1,24 @@
+{
+  "screenCoverage": "single",
+  "moduleIdentifier": "ecommerce",
+  "lastModified": "2026-09-13T00:00:00.000",
+  "content": [
+    {
+      "screenIdentifier": "home",
+      "screenContent": [
+        {
+          "key": "welcome-badge",
+          "title": "Welcome to my ecommerce",
+          "device": "both"
+        },
+        {
+          "key": "heading",
+          "title": "Everything You Need,(AEM)",
+          "subdescription": "All in One Place.",
+          "description": "Discover quality products at amazing prices. Shop electronics, fashion and home essentials.",
+          "device": "both"
+        }
+      ]
+    }
+  ]
+}

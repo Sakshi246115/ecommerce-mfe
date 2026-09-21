@@ -1,0 +1,5 @@
+/* Add to shell/src/app/app.component.css */
+.mfe-viewport-container {
+  min-height: calc(100vh - 120px); /* Adjust to match header/footer height */
+  contain: layout style;           /* Prevents browser repaint flashing */
+}

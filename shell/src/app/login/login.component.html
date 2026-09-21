@@ -1,0 +1,135 @@
+<div class="login-page">
+
+  <!-- Login Container -->
+  <div class="login-container">
+
+    <!-- Left Section -->
+    <div class="login-left">
+
+      <div class="left-content">
+
+        <h1>
+          {{ loginContent.loginTitle }}
+        </h1>
+
+        <p>
+          {{ loginContent.loginDescription }}
+        </p>
+
+      </div>
+
+      <div class="login-illustration">
+        🛍️
+      </div>
+
+    </div>
+
+
+    <!-- Right Section -->
+    <div class="login-right">
+
+      <div class="login-form">
+
+        <h2>
+          {{ loginContent.loginFormTitle }}
+        </h2>
+
+        <p class="subtitle">
+          {{ loginContent.loginFormSubtitle }}
+        </p>
+
+
+        <!-- Email -->
+        <div class="input-group">
+
+          <label>
+            {{ loginContent.emailLabel }}
+          </label>
+
+          <input
+            type="email"
+            [(ngModel)]="email"
+            (ngModelChange)="onEmailChange()"
+            [class.input-error]="emailError"
+            [placeholder]="loginContent.emailPlaceholder"
+          />
+
+          <p
+            class="field-error"
+            *ngIf="emailError">
+            {{ emailError }}
+          </p>
+
+        </div>
+
+
+        <!-- Password -->
+        <div class="input-group">
+
+          <label>
+            {{ loginContent.passwordLabel }}
+          </label>
+
+          <input
+            type="password"
+            [(ngModel)]="password"
+            (ngModelChange)="onPasswordChange()"
+            [class.input-error]="passwordError"
+            [placeholder]="loginContent.passwordPlaceholder"
+          />
+
+          <p
+            class="field-error"
+            *ngIf="passwordError">
+            {{ passwordError }}
+          </p>
+
+        </div>
+
+
+        <!-- Error -->
+        <div
+          class="error-message"
+          *ngIf="errorMessage"
+        >
+          {{ errorMessage }}
+        </div>
+
+
+        <!-- Terms -->
+        <p class="terms">
+
+          {{ loginContent.terms }}
+
+        </p>
+
+
+        <!-- Continue -->
+        <button
+          type="button"
+          class="continue-button"
+          (click)="login()"
+        >
+          {{ loginContent.continue }}
+        </button>
+
+
+        <!-- Signup -->
+        <p class="signup-text">
+
+          {{ loginContent.signupText }}
+
+          <span
+            (click)="goToRegister()">
+            {{ loginContent.createAccount }}
+          </span>
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

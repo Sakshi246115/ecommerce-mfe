@@ -1,0 +1,205 @@
+<div class="home-page">
+
+  <!-- Hero Section -->
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <span class="hero-badge">
+        ✨ {{ homeContent.badge }}
+      </span>
+
+      <h1>
+        {{ homeContent.heading }}
+        <span>{{ homeContent.headingHighlight }}</span>
+      </h1>
+
+      <p>
+        {{ homeContent.description }}
+      </p>
+
+      <div class="hero-actions">
+
+        <button
+          class="primary-btn"
+          routerLink="/products">
+          Shop Now
+        </button>
+
+        <button
+          class="secondary-btn"
+          routerLink="/products">
+          Explore Products
+        </button>
+
+      </div>
+
+    </div>
+
+    <div class="hero-visual">
+      <div class="shopping-card">
+        🛍️
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- Categories -->
+  <section class="categories-section">
+
+    <div class="section-heading">
+
+      <span>EXPLORE</span>
+
+      <h2>
+        Shop by Category
+      </h2>
+
+      <p>
+        Find everything you need from our popular categories.
+      </p>
+
+    </div>
+
+
+    <div class="category-grid">
+
+      <!-- Electronics -->
+      <div class="category-card">
+
+        <div class="category-icon">
+          📱
+        </div>
+
+        <h3>
+          Electronics
+        </h3>
+
+        <p>
+          Smartphones, laptops, headphones and more.
+        </p>
+
+        <button
+          [routerLink]="['/products']"
+          [queryParams]="{ category: 'Electronics' }">
+          Shop Electronics →
+        </button>
+
+      </div>
+
+
+      <!-- Fashion -->
+      <div class="category-card">
+
+        <div class="category-icon">
+          👕
+        </div>
+
+        <h3>
+          Fashion
+        </h3>
+
+        <p>
+          Discover the latest fashion and trends.
+        </p>
+
+        <button
+          [routerLink]="['/products']"
+          [queryParams]="{ category: 'Fashion' }">
+          Shop Fashion →
+        </button>
+
+      </div>
+
+
+      <!-- Home -->
+      <div class="category-card">
+
+        <div class="category-icon">
+          🏠
+        </div>
+
+        <h3>
+          Home
+        </h3>
+
+        <p>
+          Make your home comfortable and beautiful.
+        </p>
+
+        <button
+          [routerLink]="['/products']"
+          [queryParams]="{ category: 'Home' }">
+          Shop Home →
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Features -->
+  <section class="features-section">
+
+    <div class="feature">
+
+      <div class="feature-icon">
+        🚚
+      </div>
+
+      <div>
+        <h3>
+          Fast Delivery
+        </h3>
+
+        <p>
+          Quick and reliable delivery.
+        </p>
+      </div>
+
+    </div>
+
+
+    <div class="feature">
+
+      <div class="feature-icon">
+        🔒
+      </div>
+
+      <div>
+        <h3>
+          Secure Payment
+        </h3>
+
+        <p>
+          Your payment is always protected.
+        </p>
+      </div>
+
+    </div>
+
+
+    <div class="feature">
+
+      <div class="feature-icon">
+        ⭐
+      </div>
+
+      <div>
+        <h3>
+          Quality Products
+        </h3>
+
+        <p>
+          Products selected for you.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+</div>

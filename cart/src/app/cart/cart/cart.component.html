@@ -1,0 +1,243 @@
+<div class="cart-page">
+
+  <div class="cart-header">
+
+    <div>
+
+      <p class="cart-badge">
+        {{ cartContent.cartBadge }}
+      </p>
+
+      <h1>
+        {{ cartContent.cartTitle }}
+      </h1>
+
+      <p class="cart-subtitle">
+        {{ cartContent.cartSubtitle }}
+      </p>
+
+    </div>
+
+    <div
+      class="item-count"
+      *ngIf="cartItems.length > 0">
+
+      {{ totalItems }}
+      {{ totalItems === 1 ? 'Item' : 'Items' }}
+
+    </div>
+
+  </div>
+
+
+  <div
+    class="empty-cart"
+    *ngIf="cartItems.length === 0">
+
+    <div class="empty-icon">
+      🛒
+    </div>
+
+    <h2>
+      {{ cartContent.emptyCartTitle }}
+    </h2>
+
+    <p>
+      {{ cartContent.emptyCartDescription }}
+    </p>
+
+    <a
+      routerLink="/products"
+      class="shop-button">
+
+      {{ cartContent.continueShopping }}
+
+    </a>
+
+  </div>
+
+
+  <div
+    class="cart-layout"
+    *ngIf="cartItems.length > 0">
+
+    <div class="cart-products">
+
+      <div
+        class="cart-item"
+        *ngFor="let item of cartItems">
+
+        <div class="product-image">
+
+          <img
+            [src]="item.image"
+            [alt]="item.name"
+            loading="lazy">
+
+        </div>
+
+
+        <div class="product-info">
+
+          <span class="category">
+            {{ item.category || 'Product' }}
+          </span>
+
+          <h2>
+            {{ item.name }}
+          </h2>
+
+          <p>
+            {{ item.description }}
+          </p>
+
+          <div class="price">
+            ₹{{ item.price | number:'1.0-0' }}
+          </div>
+
+        </div>
+
+
+        <div class="quantity-section">
+
+          <span class="quantity-label">
+            {{ cartContent.quantity }}
+          </span>
+
+          <div class="quantity-control">
+
+            <button
+              type="button"
+              aria-label="Decrease quantity"
+              (click)="decreaseQuantity(item)">
+
+              −
+
+            </button>
+
+            <strong>
+              {{ item.quantity }}
+            </strong>
+
+            <button
+              type="button"
+              aria-label="Increase quantity"
+              (click)="increaseQuantity(item)">
+
+              +
+
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <div class="item-total">
+
+          <span>
+            {{ cartContent.itemTotal }}
+          </span>
+
+          <strong>
+            ₹{{ getItemTotal(item) | number:'1.0-0' }}
+          </strong>
+
+          <button
+            type="button"
+            class="remove-button"
+            (click)="removeItem(item)">
+
+            {{ cartContent.remove }}
+
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <button
+        type="button"
+        class="clear-cart"
+        (click)="clearCart()">
+
+        {{ cartContent.clearCart }}
+
+      </button>
+
+    </div>
+
+
+    <div class="order-summary">
+
+      <h2>
+        {{ cartContent.orderSummary }}
+      </h2>
+
+
+      <div class="summary-row">
+
+        <span>
+          Items ({{ totalItems }})
+        </span>
+
+        <strong>
+          ₹{{ subtotal | number:'1.0-0' }}
+        </strong>
+
+      </div>
+
+
+      <div class="summary-row">
+
+        <span>
+          Shipping
+        </span>
+
+        <strong>
+          ₹{{ shipping | number:'1.0-0' }}
+        </strong>
+
+      </div>
+
+
+      <div class="divider"></div>
+
+
+      <div class="total-row">
+
+        <span>
+          Total
+        </span>
+
+        <strong>
+          ₹{{ total | number:'1.0-0' }}
+        </strong>
+
+      </div>
+
+
+      <button
+        type="button"
+        class="checkout-button"
+        (click)="checkout()">
+
+        {{ cartContent.checkout }}
+
+      </button>
+
+
+      <a
+        routerLink="/products"
+        class="continue-shopping">
+
+        ← {{ cartContent.continueShopping }}
+
+      </a>
+
+    </div>
+
+  </div>
+
+</div>

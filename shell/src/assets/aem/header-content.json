@@ -1,0 +1,62 @@
+{
+  "screenCoverage": "single",
+  "moduleIdentifier": "ecommerce",
+  "lastModified": "2026-09-21T00:00:00.000",
+  "content": [
+    {
+      "screenIdentifier": "header",
+      "screenContent": [
+        {
+          "key": "logo",
+          "title": "My Ecommerce (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "home",
+          "title": "Home (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "products",
+          "title": "Products (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "cart",
+          "title": "Cart (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "orders",
+          "title": "Orders (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "welcome",
+          "title": "Welcome (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "user",
+          "title": "User (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "my-profile",
+          "title": "My Profile (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "my-orders",
+          "title": "My Orders (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "logout",
+          "title": "Logout (AEM)",
+          "device": "both"
+        }
+      ]
+    }
+  ]
+}

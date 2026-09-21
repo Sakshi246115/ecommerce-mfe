@@ -1,0 +1,50 @@
+{
+  "screenCoverage": "multiple",
+  "moduleIdentifier": "ecommerce",
+  "lastModified": "2026-09-13T00:00:00.000",
+  "content": [
+    {
+      "screenIdentifier": "products",
+      "screenContent": [
+        {
+          "key": "heading",
+          "title": "Discover Amazing Products",
+          "description": "Find quality products at the best prices.",
+          "device": "both"
+        },
+        {
+          "key": "search",
+          "title": "Search products",
+          "device": "both"
+        },
+        {
+          "key": "empty-state",
+          "title": "No products found",
+          "description": "Try changing your search or filters.",
+          "device": "both"
+        }
+      ]
+    },
+    {
+      "screenIdentifier": "product-details",
+      "screenContent": [
+        {
+          "key": "back-button",
+          "title": "← Back to Products",
+          "device": "both"
+        },
+        {
+          "key": "add-to-cart",
+          "title": "🛒 Add to Cart",
+          "device": "both"
+        },
+        {
+          "key": "not-found",
+          "title": "Product Not Found",
+          "description": "The product you are looking for is not available.",
+          "device": "both"
+        }
+      ]
+    }
+  ]
+}

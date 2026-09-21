@@ -1,0 +1,172 @@
+<header
+  class="header"
+  *ngIf="!isLoginPage">
+
+  <div class="header-container">
+
+    <div
+      class="logo"
+      routerLink="/">
+
+      <span class="logo-icon">
+        🛍️
+      </span>
+
+      <span class="logo-text">
+        {{ headerContent.logo }}
+      </span>
+
+    </div>
+
+    <nav class="navigation">
+
+      <a
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }">
+
+        {{ headerContent.home }}
+
+      </a>
+
+      <a
+        routerLink="/products"
+        routerLinkActive="active">
+
+        {{ headerContent.products }}
+
+      </a>
+
+      <a
+        routerLink="/cart"
+        routerLinkActive="active">
+
+        🛒 {{ headerContent.cart }}<span
+          *ngIf="cartCount > 0">
+          ({{ cartCount }})
+        </span>
+
+      </a>
+
+      <a
+        routerLink="/cart/orders"
+        routerLinkActive="active">
+
+        {{ headerContent.orders }}
+
+      </a>
+
+    </nav>
+
+    <div class="user-section">
+
+      <!-- Account Section -->
+
+      <div
+        class="user-info"
+        (click)="toggleAccountMenu()">
+
+        <span class="user-icon">
+          👤
+        </span>
+
+        <div class="user-details">
+
+          <span class="welcome-text">
+
+            {{
+              userName ||
+              headerContent.welcome
+            }}
+
+          </span>
+
+          <span class="user-email">
+
+            {{ userEmail }}
+
+          </span>
+
+        </div>
+
+      </div>
+
+      <!-- Account Dropdown -->
+
+      <div
+        class="account-dropdown"
+        *ngIf="accountMenuOpen">
+
+        <div
+          class="account-dropdown-header">
+
+          <span
+            class="account-dropdown-icon">
+
+            👤
+
+          </span>
+
+          <div>
+
+            <strong>
+
+              {{
+                userName ||
+                headerContent.user
+              }}
+
+            </strong>
+
+            <span>
+
+              {{ userEmail }}
+
+            </span>
+
+          </div>
+
+        </div>
+
+        <div
+          class="account-dropdown-item">
+
+          👤 {{ headerContent.myProfile }}
+
+        </div>
+
+        <a
+          class="account-dropdown-item"
+          routerLink="/cart/orders"
+          (click)="accountMenuOpen = false">
+
+          📦 {{ headerContent.myOrders }}
+
+        </a>
+
+        <div
+          class="account-dropdown-item logout-item"
+          (click)="logout()">
+
+          🚪 {{ headerContent.logout }}
+
+        </div>
+
+      </div>
+
+      <!-- Existing Logout Button -->
+
+      <button
+        type="button"
+        class="logout-button"
+        (click)="logout()">
+
+        {{ headerContent.logout }}
+
+      </button>
+
+    </div>
+
+  </div>
+
+</header>

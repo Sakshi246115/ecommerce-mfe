@@ -1,0 +1,158 @@
+<div class="register-page">
+
+  <div class="register-container">
+
+    <div class="register-left">
+
+      <div class="left-content">
+
+        <h1>Create Account</h1>
+
+        <p>
+          Create your account to access your orders,
+          exclusive offers, rewards and recommendations.
+        </p>
+
+      </div>
+
+      <div class="register-illustration">
+        🛍️
+      </div>
+
+    </div>
+
+
+    <div class="register-right">
+
+      <div class="register-form">
+
+        <h2>Create an account</h2>
+
+        <p class="subtitle">
+          Enter your details to get started
+        </p>
+
+
+        <div class="input-group">
+
+          <label>Name</label>
+
+          <input
+            type="text"
+            [(ngModel)]="name"
+            (ngModelChange)="onNameChange()"
+            [class.input-error]="nameError"
+            placeholder="Enter Name"
+          />
+
+          <p
+            class="field-error"
+            *ngIf="nameError">
+            {{ nameError }}
+          </p>
+
+        </div>
+
+
+        <div class="input-group">
+
+          <label>Email</label>
+
+          <input
+            type="email"
+            [(ngModel)]="email"
+            (ngModelChange)="onEmailChange()"
+            [class.input-error]="emailError"
+            placeholder="Enter Email"
+          />
+
+          <p
+            class="field-error"
+            *ngIf="emailError">
+            {{ emailError }}
+          </p>
+
+        </div>
+
+
+        <div class="input-group">
+
+          <label>Password</label>
+
+          <input
+            type="password"
+            [(ngModel)]="password"
+            (ngModelChange)="onPasswordChange()"
+            [class.input-error]="passwordError"
+            placeholder="Enter Password"
+          />
+
+          <p
+            class="field-error"
+            *ngIf="passwordError">
+            {{ passwordError }}
+          </p>
+
+        </div>
+
+
+        <div class="input-group">
+
+          <label>Confirm Password</label>
+
+          <input
+            type="password"
+            [(ngModel)]="confirmPassword"
+            (ngModelChange)="onConfirmPasswordChange()"
+            [class.input-error]="confirmPasswordError"
+            placeholder="Confirm Password"
+          />
+
+          <p
+            class="field-error"
+            *ngIf="confirmPasswordError">
+            {{ confirmPasswordError }}
+          </p>
+
+        </div>
+
+
+        <div
+          class="error-message"
+          *ngIf="errorMessage">
+
+          {{ errorMessage }}
+
+        </div>
+
+
+        <button
+          type="button"
+          class="continue-button"
+          (click)="register()">
+
+          Create Account
+
+        </button>
+
+
+        <p class="login-text">
+
+          Already have an account?
+
+          <span
+            (click)="goToLogin()">
+
+            Login
+
+          </span>
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,56 @@
+
+> shell@0.0.0 test:jest
+> jest --runInBand src/app/login/login.component.spec.ts
+
+ts-jest[config] (WARN) [94mmessage[0m[90m TS151001: [0mIf you have issues related to imports, you should consider setting `esModuleInterop` to `true` in your TypeScript configuration file (usually `tsconfig.json`). See https://blogs.msdn.microsoft.com/typescript/2018/01/31/announcing-typescript-2-7/#easier-ecmascript-module-interoperability for more information.
+FAIL src/app/login/login.component.spec.ts
+  LoginComponent
+    × should create (5 ms)
+
+  ● LoginComponent › should create
+
+    TypeError: this.input.charCodeAt is not a function
+
+    [0m [90m 11 |[39m       declarations[33m:[39m [[33mLoginComponent[39m]
+     [90m 12 |[39m     })[33m;[39m
+    [31m[1m>[22m[39m[90m 13 |[39m     fixture [33m=[39m [33mTestBed[39m[33m.[39mcreateComponent([33mLoginComponent[39m)[33m;[39m
+     [90m    |[39m                       [31m[1m^[22m[39m
+     [90m 14 |[39m     component [33m=[39m fixture[33m.[39mcomponentInstance[33m;[39m
+     [90m 15 |[39m     fixture[33m.[39mdetectChanges()[33m;[39m
+     [90m 16 |[39m   })[33m;[39m[0m
+
+      at PlainCharacterCursor.charAt (node_modules/@angular/compiler/fesm2022/compiler.mjs:19989:27)
+      at PlainCharacterCursor.updatePeek (node_modules/@angular/compiler/fesm2022/compiler.mjs:20008:61)
+      at PlainCharacterCursor.init (node_modules/@angular/compiler/fesm2022/compiler.mjs:19967:14)
+      at new _Tokenizer (node_modules/@angular/compiler/fesm2022/compiler.mjs:19138:26)
+      at tokenize (node_modules/@angular/compiler/fesm2022/compiler.mjs:19086:23)
+      at HtmlParser.parse (node_modules/@angular/compiler/fesm2022/compiler.mjs:20176:32)
+      at HtmlParser.parse (node_modules/@angular/compiler/fesm2022/compiler.mjs:20657:22)
+      at parseTemplate (node_modules/@angular/compiler/fesm2022/compiler.mjs:24780:36)
+      at parseJitTemplate (node_modules/@angular/compiler/fesm2022/compiler.mjs:26145:20)
+      at CompilerFacadeImpl.compileComponent (node_modules/@angular/compiler/fesm2022/compiler.mjs:25851:45)
+      at Function.get (node_modules/@angular/core/fesm2022/core.mjs:25927:34)
+      at getComponentDef (node_modules/@angular/core/fesm2022/core.mjs:2034:12)
+      at verifyDeclarationsHaveDefinitions (node_modules/@angular/core/fesm2022/core.mjs:25526:21)
+          at Array.forEach (<anonymous>)
+      at verifySemanticsOfNgModuleDef (node_modules/@angular/core/fesm2022/core.mjs:25500:18)
+      at Function.get (node_modules/@angular/core/fesm2022/core.mjs:25448:30)
+      at TestBedCompiler.applyProviderOverridesInScope (node_modules/@angular/core/fesm2022/testing.mjs:26707:29)
+      at TestBedCompiler.compileTestModule (node_modules/@angular/core/fesm2022/testing.mjs:27001:14)
+      at TestBedCompiler.finalize (node_modules/@angular/core/fesm2022/testing.mjs:26549:14)
+      at _TestBedImpl.get testModuleRef [as testModuleRef] (node_modules/@angular/core/fesm2022/testing.mjs:27515:49)
+      at _TestBedImpl.inject (node_modules/@angular/core/fesm2022/testing.mjs:27428:29)
+      at _TestBedImpl.createComponent (node_modules/@angular/core/fesm2022/testing.mjs:27480:44)
+      at Function.createComponent (node_modules/@angular/core/fesm2022/testing.mjs:27302:37)
+      at src/app/login/login.component.spec.ts:13:23
+      at _ZoneDelegate.Object.<anonymous>._ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:411:30)
+      at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (node_modules/zone.js/bundles/zone-testing.umd.js:300:43)
+      at _ZoneDelegate.Object.<anonymous>._ZoneDelegate.invoke (node_modules/zone.js/bundles/zone.umd.js:410:56)
+      at Zone.Object.<anonymous>.Zone.run (node_modules/zone.js/bundles/zone.umd.js:165:47)
+      at Object.wrappedFunc (node_modules/zone.js/bundles/zone-testing.umd.js:789:34)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        3.513 s
+Ran all test suites matching /src\\app\\login\\login.component.spec.ts/i.

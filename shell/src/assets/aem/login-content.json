@@ -1,0 +1,97 @@
+{
+  "screenCoverage": "single",
+  "moduleIdentifier": "ecommerce",
+  "lastModified": "2026-09-20T00:00:00.000",
+  "content": [
+    {
+      "screenIdentifier": "login",
+      "screenContent": [
+        {
+          "key": "login-title",
+          "title": "Login (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "login-description",
+          "title": "Login to access your orders, exclusive offers, rewards and recommendations. (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "login-form-title",
+          "title": "Login for the best experience (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "login-form-subtitle",
+          "title": "Enter your email and password to continue (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "email-label",
+          "title": "Email (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "email-placeholder",
+          "title": "Enter Email (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "password-label",
+          "title": "Password (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "password-placeholder",
+          "title": "Enter Password (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "terms",
+          "title": "By continuing, you agree to our Terms of Use and Privacy Policy. (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "terms-of-use",
+          "title": "Terms of Use (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "privacy-policy",
+          "title": "Privacy Policy (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "continue",
+          "title": "Continue (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "signup-text",
+          "title": "New to My Ecommerce? (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "create-account",
+          "title": "Create an account (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "email-required",
+          "title": "Please enter your email. (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "password-required",
+          "title": "Please enter your password. (AEM)",
+          "device": "both"
+        },
+        {
+          "key": "invalid-email",
+          "title": "Please enter a valid email address. (AEM)",
+          "device": "both"
+        }
+      ]
+    }
+  ]
+}
